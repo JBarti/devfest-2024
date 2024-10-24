@@ -105,9 +105,9 @@ def download_cadastre():
             particle_ids.append(e.text)
 
         # Extract the municipality ID
-        municipality_id = next(city_id_element.iter()).text
+        city_id = next(city_id_element.iter()).text
 
-        return particle_ids, municipality_id
+        return particle_ids, city_id
 
 
     @task(execution_timeout=timedelta(hours=2))
